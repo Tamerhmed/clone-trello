@@ -11,9 +11,13 @@ const useStyle = makeStyles((theme)=> ({
       editableTitle: {
             marginLeft:theme.spacing(1),
             flexGrow: 1,
+            foneSize:'1.2rem',
+            fontWeight:'bold',
       },
       input: {
             margin: theme.spacing(1),
+            foneSize:'1.2rem',
+            fontWeight:'bold',
             "&:focus" : {
                   background: '#ddd',
             }
@@ -36,6 +40,7 @@ const Title = () => {
 
                    }}
                    fullWidth
+                   autoFocus
                    onBlur={()=>setOpen(!open) }
                   />
                   </div>  
