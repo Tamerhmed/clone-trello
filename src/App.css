@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App-header {
+      background-color: #282c34;
+      min-height: 100vh;
+      display: flex;
+      /* align-items: center; */
+      color: white;
+      font-size: 1.5rem;
+}
+
+.drag-n-drop {
+      display: grid;
+      width: 100%;
+      height: 100%;
+      gap: 0.5rem;
+      grid-template-columns: repeat(auto-fill, 300px);
+      align-items: start;
+}
+
+.dnd-group {
+      background-color: #49505e;
+      border-radius: 5px;
+      padding: 0.5rem;
+}
+.dnd-item {
+      min-height: 150px;
+      background-color: white;
+      border-radius: 5px;
+      color: #282c34;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor:pointer;
+      
+}
+.dnd-item:not(:last-of-type) {
+      margin-bottom: 5px;
+}
+
+.group-title {
+      text-align: left;
+      margin-bottom: .5rem;
+
+}
+
+.current {
+      background-color:#282c34 ;
+}
