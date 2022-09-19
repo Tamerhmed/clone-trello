@@ -13,18 +13,18 @@ const useStyle = makeStyles((theme)=> ({
       },
 }));
 
-const List = () => {
+const List = ({list}) => {
 
       const classes = useStyle();
-
+console.log(list)
   return (
     <div>
       <Paper className={classes.root}>
             <CssBaseline />
-            <Title />
-            <Card />
-            <Card />
-            <Card />
+            <Title title={list.title}/>
+           {list.cards.map((card)=> (
+                  <Card key={card.id} card={card}/>
+           ))}
             <InputContainer />
       </Paper>
     </div>

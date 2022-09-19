@@ -24,7 +24,7 @@ const useStyle = makeStyles((theme)=> ({
       }
 }));
 
-const Title = () => {
+const Title = ({title}) => {
       const [open, setOpen] = useState(false);
       const classes =  useStyle();
 
@@ -34,7 +34,7 @@ const Title = () => {
             open?
             (
                  <div>
-                   <InputBase value='Todo'
+                   <InputBase value={title}
                    inputProps={{
                         className: classes.input,
 
@@ -50,7 +50,7 @@ const Title = () => {
                         onClick={()=> setOpen(!open)}
                         className={classes.editableTitle}
                         >
-                         Todo
+                         {title}
                         </Typography>
                         <MoreHorizIcon />
                         </div>
